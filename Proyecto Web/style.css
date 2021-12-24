@@ -1,0 +1,464 @@
+/*Codigo que resetea los estilos globales de la pagina web*/
+
+*{
+    box-sizing: border-box;/* forma de calcular correctamente las dimensiones de los elementos de htlm para que no se sumen paddings o borders*/
+    padding: 0;
+    margin: 0;
+}
+
+/*Estilo del cuerpo del documento html "Body"*/
+body{
+ background: #000000;
+ color: #ffff;
+
+ /*Patron de diseño de css para la pagina web*/
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  /*Tamaño de la fuente*/
+  font-size: 17px;
+
+  /*Aplicacion de fuente oswald en css para el body html*/
+  font-family: 'Oswald', sans-serif;
+
+}
+
+/*Para los estilos de mis elementos de etiquetas a*/
+a{
+   color: #ffff;
+   text-decoration: none;
+}
+
+/*Para los estilos de mis listas ul*/
+ul{
+    list-style: none;
+}
+
+/*Para estilos de la clase container*/
+.container{
+    width: 90%;
+    margin: auto;
+    
+}
+
+
+/*NAVEGATION*/
+
+/*Para estilos de la clase Nav-Main, (estilos de navegacion)*/
+.nav-main{
+    font-size: 17px;
+
+    /* display flex, permite organizar los documentos de manera horizontal o vertical*/
+    display: flex;
+
+    /*para usar todo el ancho disponible*/
+    justify-content: space-between;
+
+    /*indica la alineacion del objeto*/
+    align-items:center;
+    height: 65px;
+    padding: 20px 0;
+
+}
+
+/*La clase que tiene la imagen, usando la propiedad width(ancho) para ponerla de 50 pixeles*/
+/*Los pixeles (picture element) son la unidad minima de una imagen y estan formados por matrices rgb*/
+.Nav-brands{
+
+    width: 50px;
+}
+
+
+/*NAVEGATION LEFT*/
+
+/*Aqui hago referencia a la clase nav-main, a la lista ul para que se posiciones de manera horizontal en la pag*/
+.nav-main ul{
+
+    display: flex;
+}
+
+/*Aqui hago referencia a las listas dentro del ul*/
+.nav-main ul li{
+  /*para indicar la separacion entre elementos */
+    padding: 10px;
+    
+}
+
+/*Aqui hago referencia a cada elemento 'a' de la navegacion*/
+
+.nav-main ul li a{
+ padding: 6px;
+
+}
+
+/*Aqui hago referencia a cada elemento 'a' de mi lista cuando el cursor pasa sobre ellos */
+.nav-main ul li a:hover {
+  border-bottom: 2px solid #ffff;
+
+}
+
+/*Aqui hago referencia a cada elemento de mi clase nav menu de mi ul*/
+
+.nav-main ul.Nav-menu{
+ /*Flex para indicar la flexibilidad de mis elemetos */
+  flex: 1;
+  /*margin left, para indicar una separacion entre la lista y el elemento de su izquierda*/
+  margin-left: 20px;
+}
+
+
+.menu-btn{
+
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    font-size: 1.5rem;
+    display: none;
+}
+
+
+
+
+
+/*A partir de aqui estoy en mi  clase showcase del header html*/
+
+
+/*SHOWCASE*/
+
+/*Estillos del hr la linea entre el nav y el showcase*/
+hr{
+
+    margin: 10px 0;
+
+}
+
+/* propiedades para la clase showcase*/
+.Showcase{
+ width: 100%;
+ height: 550px;
+ background: url(img/kakashiPR.webp) no-repeat center center/cover;
+ padding: 50px;
+ margin-bottom: 20px;
+ /*para poner el contenido  horizontal y separado*/
+ display: flex;
+ /*para indicarle que va 1 debajo de otro*/
+ flex-direction: column;
+ /*para centralizarlo*/
+ align-items: center;
+ /*para ponerlo en la seccion final del espacio*/
+ justify-content: flex-end;
+}
+
+/*Propiedades de la clase btn del boton*/
+.btn{
+
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #fff;
+}
+
+/*Pseudo clase hover para estilizar el boton*/
+.btn:hover{
+    /*le da transparencia al boton mientras el cursor esta encima*/
+    opacity: .7;
+}
+
+/*Para estilizar el h2 y el p de mi html, que representan textos que tengo escritos en el show case*/
+.Showcase h2,
+.Showcase p{
+ 
+    margin-bottom: 10px;
+
+}
+
+
+/*NEWS CARDS STYLE*/
+
+/*para los estilos de los elementos de mi clase new-cards*/
+.new-cards{
+
+    /*El grid es una cuadrícula sobre la que se distribuyen los distintos elementos que componen la web.*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*Espaciado entre los elementos de imagen*/
+    gap: 25px;
+    margin: 10px 0;
+}
+
+/*para los estilos de mis imagenes*/
+.new-cards img{
+
+    width: 100%;
+    height: 180px;
+    
+}
+
+/*usando la pseudo clase hover para cuando el cursor pase sobre los elementos a de mis div en html*/
+.new-cards a:hover{
+
+    border-bottom: 2px solid #ffff;
+
+}
+
+.new-cards h3{
+
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/*CARDS BANNER ONE*/
+
+.cards-banner-one{
+    width: 70%;
+    height: 350px;
+    background: url(img/4ta\ guerra.jpg) no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+
+.cards-banner-one .content{
+    width: 40%;
+    /*padding: arriba,abajo,derecha,izquierda*/
+    padding: 90px 0 0 30px;
+    color: #ffffff;
+
+}
+
+.cards-banner-one p,
+.cards-banner-one h2{
+    margin: 10px,0,20px,0;
+
+}
+
+
+/*CARDS BANNER TWO*/
+
+.cards-banner-two{
+    width: 39%;
+    height: 280px;
+    background: url(img/hokages.jpg) no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+
+.cards-banner-two .content{
+    width: 40%;
+    /*padding: arriba,abajo,derecha,izquierda*/
+    padding: 140px 0 0 5px;
+    color: #ffffff;
+
+}
+
+.cards-banner-two p,
+.cards-banner-two h2{
+    margin: 10px,0,20px,0;
+
+}
+
+/*SOCIAL*/
+
+.Social{
+
+    margin: 50px;
+}
+
+.Social p{
+
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.links a{
+
+    padding: 7px;
+}
+
+.links a i{
+
+    font-size: 3rem;
+
+}
+
+/*FOOTER STYLES*/
+
+.footer-links{
+
+    background: #2f3240 ;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container{
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul{
+
+    margin: 0 auto;
+
+}
+
+.footer-container ul li{
+
+    line-height: 2.8;
+
+}
+
+.footer-copy{
+
+    background: #2f3240;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media(max-width:700px){
+
+    .menu-btn{
+
+        display: block;
+    }
+
+
+    .nav-main ul.Nav-menu{
+
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2f3640;
+        height: 100%;
+        padding: 30px;
+        opacity: .9;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-main ul.Nav-menu.show{
+
+        transform: translateX(-20px);
+
+    }
+
+    .nav-main ul.Nav-menu li{
+
+        padding: 20px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;
+    }
+
+    .nav-main ul.nav-menu-rigth{
+
+        margin: 30px;
+
+    }
+
+
+
+    
+    .new-cards{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+
+
+    .cards-banner-one .content{
+        width: 40%;
+        /*padding: arriba,abajo,derecha,izquierda*/
+        padding: 50px 0 0 10px;
+        color: #ffffff;
+        font-size: 15px;
+    
+    }
+
+    
+
+    .cards-banner-two{
+        width: 100%;
+        height: 280px;
+        background: url(img/hokages.jpg) no-repeat center center/cover;
+        margin-bottom: 40px;
+    }
+    
+    
+    .footer-links .footer-container{
+        grid-template-columns: repeat(2,1fr);
+
+
+    }
+
+
+
+
+
+
+}
+
+@media(max-width:500px){
+
+    .menu-btn{
+
+        display: block;
+    }
+
+
+    .new-cards{
+
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+    .cards-banner-one .content{
+        width: 40%;
+        /*padding: arriba,abajo,derecha,izquierda*/
+        padding: 30px 0 0 10px;
+        color: #ffffff;
+        font-size: 15px;
+    
+    }
+
+    .cards-banner-one{
+        width: 100%;
+        height: 350px;
+        background: url(img/4ta\ guerra.jpg) no-repeat center center/cover;
+        margin-bottom: 40px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
